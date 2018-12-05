@@ -1,5 +1,12 @@
 .main-nav {
   background: $primary-color;
+  max-height: 0;
+  transition: all .3s;
+
+  &.show {
+    max-height: 10000px;
+  }
+
 }
 
 .main-menu {
@@ -22,15 +29,12 @@
 
 }
 
-.social-networks {
 
-  padding-left: 1em;
-
-  &__item {
-    text-decoration: none;
-    color: #fff;
-    display: inline-block;
-    line-height: 3;
-  }
-
+.toggle-menu {
+  color: $primary-color;
+  display: table;
+  font-size: 1.6em;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
 }

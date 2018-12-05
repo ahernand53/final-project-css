@@ -52,5 +52,17 @@
 
 }
 
+.social-networks {
 
+  padding-left: 1em;
+
+  &__item {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    line-height: 3;
+    margin-left: .5em;
+  }
+
+}
 

@@ -1,0 +1,42 @@
+
+.main-banner {
+  position: relative;
+
+  &__img {
+    display: block;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($secundary-color, .6);
+  }
+
+  &__data {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65%;
+  }
+
+  &__title {
+    width: 100%;
+    text-align: center;
+    color: $primary-color;
+    margin: 0 0 .5em;
+  }
+
+  &__subtitle,
+  &__description {
+    display: none;
+  }
+
+}
