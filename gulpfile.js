@@ -12,7 +12,7 @@ gulp.task('sass', function () {
 
 //Vuelve a ejecutar la tarea cuando se modifica algún archivo
 gulp.task('watch', function(){
-    gulp.watch('./scss/**/*', ['sass']);
+    gulp.watch('./scss/**/*.scss', ['sass']);
 });
 
 //Tarea por defecto
