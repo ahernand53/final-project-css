@@ -24,3 +24,12 @@
 
 - Los componentes que se repiten a lo largo de la aplicacion
     - botones, iconos, widgets
+    
+    
+## Herramientas utiles
+
+- [Imagenes Gratis](www.pexels.com)
+
+- [Pack de iconos](http://app.fontastic.me)
+
+- [Documentacion de MD](https://help.github.com/articles/basic-writing-and-formatting-syntax/) :blue_book:

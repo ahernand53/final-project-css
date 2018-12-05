@@ -305,7 +305,9 @@ template {
 
 .main-container {
   width: 100%;
-  max-width: 1200px; }
+  max-width: 1100px;
+  margin-right: auto;
+  margin-left: auto; }
 
 .main-header {
   display: flex;
@@ -340,16 +342,21 @@ template {
   @media screen and (min-width: 640px) {
     .logo {
       width: 100%; } }
+  @media screen and (min-width: 1024x) {
+    .logo {
+      width: 70%;
+      margin: 0; } }
 
 .contact-widget {
-  display: flex; }
+  display: flex;
+  align-items: center; }
   .contact-widget__icon {
     width: 2em;
     height: 2em;
     background: #1c1717;
     color: #fff;
     text-align: center;
-    font-size: 1.4em;
+    font-size: 24px;
     margin-left: .5em; }
     .contact-widget__icon.button {
       line-height: 2.3em; }
@@ -357,9 +364,10 @@ template {
     margin-left: .5em; }
   .contact-widget__title {
     margin: 0;
-    line-height: 1; }
+    line-height: 16px; }
   .contact-widget__content {
-    margin: 0; }
+    margin: 0;
+    font-size: 12.8px; }
 
 .button {
   text-decoration: none;
@@ -371,9 +379,9 @@ template {
     color: #fff; }
   .button--light {
     background: #fff;
-    color: #47a7eb; }
+    color: #4db5ff; }
   .button--cta {
-    background: #47a7eb;
+    background: #4db5ff;
     color: #fff; }
   .button--square {
     padding: 0; }
@@ -386,6 +394,9 @@ template {
     display: inline-block;
     line-height: 3;
     margin-left: .5em; }
+  @media screen and (min-width: 1024px) {
+    .social-networks {
+      margin-right: 2em; } }
 
 *,
 *::before,
@@ -393,25 +404,38 @@ template {
   box-sizing: border-box; }
 
 body {
-  font-size: 12.8px; }
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif; }
 
 img {
   max-width: 100%; }
 
 .main-nav {
-  background: #47a7eb;
-  max-height: 0;
-  transition: all .3s; }
-  .main-nav.show {
-    max-height: 10000px; }
+  background: #4db5ff; }
+  @media screen and (max-width: 1024px) {
+    .main-nav {
+      max-height: 0;
+      transition: all .3s; }
+      .main-nav.show {
+        max-height: 10000px; } }
+  @media screen and (min-width: 1024px) {
+    .main-nav {
+      display: flex;
+      justify-content: space-between; } }
 
 .main-menu {
   list-style: none;
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0; }
+  @media screen and (min-width: 1024px) {
+    .main-menu {
+      display: flex; } }
   .main-menu__item {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+    @media screen and (min-width: 1024px) {
+      .main-menu__item {
+        border-bottom: none; } }
   .main-menu__link {
     display: block;
     line-height: 3;
@@ -420,12 +444,15 @@ img {
     color: #fff; }
 
 .toggle-menu {
-  color: #47a7eb;
+  color: #4db5ff;
   display: table;
   font-size: 1.6em;
   margin-left: auto;
   margin-right: auto;
   cursor: pointer; }
+  @media screen and (min-width: 1024px) {
+    .toggle-menu {
+      display: none; } }
 
 .main-banner {
   position: relative; }
@@ -438,23 +465,58 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(28, 23, 23, 0.6); }
+    background: linear-gradient(to top, #1a9fff, #1c1717);
+    opacity: .6; }
   .main-banner__data {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
     position: absolute;
+    width: 65%;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 65%; }
+    left: 2em;
+    transform: translateY(-50%); }
     @media screen and (min-width: 480px) {
       .main-banner__data {
         width: 40%; } }
+    @media screen and (min-width: 640px) {
+      .main-banner__data {
+        width: 30%; } }
+    @media screen and (min-width: 768px) {
+      .main-banner__data {
+        width: 50%; } }
+    @media screen and (max-width: 768px) {
+      .main-banner__data {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        justify-content: space-around; } }
   .main-banner__title {
     width: 100%;
     text-align: center;
-    color: #47a7eb;
+    color: #4db5ff;
     margin: 0 0 .5em; }
+    @media screen and (min-width: 768px) {
+      .main-banner__title {
+        text-align: left;
+        font-size: 2.2em;
+        margin: 0; } }
   .main-banner__subtitle, .main-banner__description {
-    display: none; }
+    color: #fff; }
+    @media screen and (max-width: 768px) {
+      .main-banner__subtitle, .main-banner__description {
+        display: none; } }
+  .main-banner__subtitle {
+    font-size: 1.4em;
+    margin: 0; }
+    .main-banner__subtitle::after {
+      content: "";
+      display: block;
+      width: 20%;
+      height: 2px;
+      background: #4db5ff; }
+  .main-banner__description {
+    font-size: 12.8px;
+    line-height: 1.6; }
+  @media screen and (min-width: 768px) {
+    .main-banner .button {
+      margin-right: 1em; } }

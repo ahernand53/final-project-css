@@ -2,7 +2,7 @@
 // Variables
 
 // Paleta de color
-$primary-color: hsl(205, 80%, 60%);
+$primary-color: hsl(205, 100%, 65%);
 $secundary-color: hsl(0, 10%, 10%);
 
 // Tamanos de fuentes
@@ -14,7 +14,7 @@ $xs:  $m  * 0.7;
 
 // Variables de layout
 $gutter: 16px;
-$max-width: 1200px;
+$max-width: 1100px;
 
 @import "base/normalize";
 @import "layout/layout";

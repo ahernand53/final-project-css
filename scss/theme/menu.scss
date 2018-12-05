@@ -1,10 +1,19 @@
 .main-nav {
   background: $primary-color;
-  max-height: 0;
-  transition: all .3s;
 
-  &.show {
-    max-height: 10000px;
+
+  @media screen and (max-width: 1024px) {
+    max-height: 0;
+    transition: all .3s;
+
+    &.show {
+      max-height: 10000px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    justify-content: space-between;
   }
 
 }
@@ -15,8 +24,17 @@
   margin-top: 0;
   margin-bottom: 0;
 
+  @media screen and (min-width: 1024px) {
+    display: flex;
+  }
+
   &__item {
     border-bottom: 1px solid rgba(#fff, .5);
+
+    @media screen and (min-width: 1024px) {
+      border-bottom: none;
+    }
+
   }
 
   &__link {
@@ -37,4 +55,8 @@
   margin-left: auto;
   margin-right: auto;
   cursor: pointer;
+
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
 }
