@@ -2,7 +2,7 @@
 
 #### BASE
 
-- Los aplicados a elementos HTML ( no clases, no ID )
+- Los aplicados a elementos HTML ( **no clases, no ID** )
 - Casi como un normalize
 - Inicializar tus estilos
 
